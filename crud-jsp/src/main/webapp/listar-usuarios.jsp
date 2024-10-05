@@ -13,6 +13,13 @@
 <body>
     <h1>Listar Usuários</h1>
 
+         <form action="controladora" method="GET">
+            <input type="text" name="login">
+            <input type="hidden" name ="acao" value="FiltrarUsuario">
+            <input type="submit" value="Pesquisar" >
+         </form>
+
+
     <table class="table">
         <thead>
         <tr>
@@ -38,7 +45,12 @@
         </tbody>
     </table>
 
-
+    <script>
+       let element = document.getElementById("btn_pesquisa");
+       element.addEventListener("click", function() {
+         alert("teste");
+       });
+    </script>
 
 </body>
 </html>

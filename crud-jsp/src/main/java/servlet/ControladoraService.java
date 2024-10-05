@@ -1,7 +1,7 @@
 package servlet;
 
-import acao.AdicionaUsuario;
-import acao.ListaUsuarios;
+import br.example.acao.AdicionaUsuario;
+import br.example.acao.ListaUsuarios;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,5 +23,11 @@ public class ControladoraService extends HttpServlet {
        else if(acao.equals("AdicionaUsuario")){
             new AdicionaUsuario().executa(req,resp);
         }
+
+        else if(acao.equals("FiltrarUsuario")){
+           System.out.print("Filtrando ....");
+            new ListaUsuarios().getUsuariosByLogin(req,resp);
+        }
+
     }
 }
