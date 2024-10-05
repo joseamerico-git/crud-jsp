@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Adicionar Usuário</h1>
-<form action="adicionaUsuario" method="POST">
+<form action="controladora" method="POST">
     <input type="text" name="login"></br>
     <input type="password" name="password"></br></br>
     <label>Qual o tipo de usuario?</label>
@@ -17,6 +17,7 @@
     </select>
 
     <div id="msg"></div>
+    <input type="hidden" name="acao" value="AdicionaUsuario">
     <input type="submit" value="Enviar"></br>
 </form>
 <script>

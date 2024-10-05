@@ -29,6 +29,13 @@ public class Usuario {
     private Role role1;
     public Usuario(){}
 
+    public Usuario(String login, String password, String role, Role role1) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+        this.role1 = role1;
+    }
+
     public Usuario(String login, String password, String role) {
         this.login = login;
         this.password = password;
