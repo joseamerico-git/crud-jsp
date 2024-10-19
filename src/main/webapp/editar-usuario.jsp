@@ -1,5 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,21 +14,20 @@
 
 </head>
 <body>
-<h1>Adicionar Usuário</h1>
+<h1>Editar Usuário</h1>
 
-<form action="controladora" method="POST">
+<form name="formContato">
+  <input type="text" name="id" readonly>
     <div class="form-group">
         <label for="exampleInputEmail1">Endereço de email</label>
-        <input name="login" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-               placeholder="Seu email">
+        <input name="login" id="login" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+             >
         <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
     </div>
-
     <div class="form-group">
         <label for="exampleInputPassword1">Senha</label>
         <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
     </div>
-
 
 
     <input type="hidden" name="acao" value="AdicionaUsuario">
@@ -38,9 +38,11 @@
         </select>
 
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="button" class="btn btn-primary" onclick="validar()">Salvar</button>
 </form>
+<script src="scripts/validador.js">
 
+</script>
 
 
 <script>

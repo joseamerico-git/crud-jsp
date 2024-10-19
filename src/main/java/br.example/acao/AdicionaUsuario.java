@@ -30,7 +30,7 @@ public class AdicionaUsuario {
         Usuario usuario = new Usuario(login, password, role );
         new UsuarioDao().salvar(usuario);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/usuario-adicionado.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/controladora?acao=ListaUsuarios");
         dispatcher.forward(req,resp);
 
     }

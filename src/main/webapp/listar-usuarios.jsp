@@ -37,7 +37,12 @@
 
             <td>${u.getLogin()}</td>
             <td>${u.getRole()}</td>
-            <td><a href="controladora?acao=RemoveUsuario&id=${u.getId()}">Remover</a></td>
+            <td>
+            <a href="controladora?acao=RemoveUsuario&id=${u.getId()}">Remover</a>
+            <a href="controladora?acao=EditaUsuario&id=${u.getId()}">Editar</a>
+
+
+            </td>
 
         </tr>
 
